@@ -20,6 +20,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    list-style-type: none;
     font-family: var(--main-font-family);
 }
 
@@ -52,5 +53,125 @@ header {
 
 .header-container #icon-cart {
     font-size: 18px;
+    cursor: pointer;
+}
+
+/**
+* ! NAAV BAR SECTION 
+*/
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.nav-bar {
+    background-color: var(--bg-main-color);
+    left: 0;
+    right: 0;
+    height: 0;
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.nav-bar.active {
+    height: 90vh;
+}
+
+.list-menu {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    margin: 40px;
+}
+
+.nav-bar.active .list-menu{
+    opacity: 1;
+}
+
+.list-menu li {
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+
+.list-menu li a{
+    text-decoration: none;
+    color: var(--font-main-color);
+    font-size: 18px;
+    
+}
+
+.list-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0;
+    margin: 40px;
+}
+
+.nav-bar.active .list-socials{
+    opacity: 1;
+}
+
+.list-socials li .bi {
+    color: var(--font-main-color);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/**
+* ! FOOTER SECTION 
+*/
+
+footer {
+    background-color: var(--bg-main-color);
+    height: 200px;
+}
+
+.footer-container {
+    max-width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;  
+}
+
+.first-row-info {
+    color: var(--font-secondary-color);
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.first-row-info h6 {
+    padding: 5px;
+}
+
+.second-row-info {
+    width: 90%;
+    height: 50px;
+    display:  flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--bg-main-color);
+    justify-content: space-between;
+}
+
+.second-row-info .bi {
+    font-size: 20px;
+    background-color: var(--font-main-color);
+    padding: 3px 10px;
+    border-radius: 5px;
     cursor: pointer;
 }

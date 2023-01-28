@@ -5,6 +5,10 @@
     --font-sub-color: #595959;
 }
 
+/**
+* ! FILTER 
+*/
+
 .filter-container {
     margin-left: 10px;
 }
@@ -21,6 +25,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/**
+* ! CATALOGUE SECTION 
+*/
 
 .catalogue-section {
     max-width: 95%;
