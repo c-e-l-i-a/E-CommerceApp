@@ -1,0 +1,56 @@
+:root {
+    --bg-main-color: #0D0D0D;
+    --font-main-color: #fff;
+    --font-secondary-color: #E59A01;
+    --font-sub-color: #595959;
+
+    --h1: 40px;
+    --h2: 32px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 16px;
+
+    --main-font-family: 'Roboto Condensed', sans-serif;
+    --second-font-family: 'Roboto', sans-serif;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--main-font-family);
+}
+
+header {
+    height: 100px;
+    background-color: var(--bg-main-color);
+}
+
+.header-container {
+    height: 100px;
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--font-main-color);
+}
+
+.header-container h1 a{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--font-main-color);
+    text-decoration: none;
+}
+
+.header-container #icon-list {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.header-container #icon-cart {
+    font-size: 18px;
+    cursor: pointer;
+}
