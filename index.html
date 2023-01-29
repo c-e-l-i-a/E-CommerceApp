@@ -12,7 +12,7 @@
     <title>Figures Shop</title>
 </head>
 <body>
-
+    <!-- HEADER SECTION -->
     <header>
         <div class="header-container">
             <i id="icon-list" class="bi bi-list"></i>
@@ -20,12 +20,14 @@
             <i id="icon-cart" class="bi bi-cart-plus-fill"><a href="#"></a></i>
         </div>       
     </header>
+    <!-- END HEADER SECTION -->
 
+    <!-- NAV MENU -->
     <nav class="nav-bar">
         <div class="list-menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Legal</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.html">About</a></li>
         </div>
 
         <div class="list-socials">
@@ -35,7 +37,42 @@
             <li><i class="bi bi-linkedin"></i></li>
         </div>
     </nav>
+    <!-- END NAV MENU -->
 
+    <!-- CART SECTION -->
+    <div class="cart-container">
+        <div class="cart-header-info">
+            <h3>Cart</h3>
+        </div>
+        <div class="cart-products-container">
+        <div class="cart-product">
+            <img src="images/figurine4.jpg" alt="image product" style="height: 120px;">
+            <div class="product-info-container">
+                <div class="product-cross"><i class="bi bi-x"></i></div>
+                <div class="product-info">
+                <h4>Name</h4>
+                <h5>Price</h5>
+                <div class="product-info-number">
+                    <i class="bi bi-dash"></i>
+                    <span class="quantity">0</span>
+                    <i class="bi bi-plus"></i>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="cart-footer-info">
+            <div class="total-price-container">
+            <h5>SUBTOTAL</h5>
+            <span class="total-price">00,00 €</span>
+            </div>
+            <button class="checkout-btn">Check Out</button>
+        </div>
+    </div>
+    <!-- END CART SECTION-->
+
+    <!-- CATALOGUE FIGURES SECTION -->
     <section class="catalogue-section">
         <div class="filter-container">
            <button><a href="#">Filter By
@@ -44,7 +81,7 @@
         </div>
         <div class="grid-container">
             <div class="figures-container">
-                <div class="image-container"><img src="images/figurine1.jpg" alt=""></div>
+                <img src="images/figurine1.jpg" alt="">
                 <div class="footer-figures-info">
                     <h4>Name</h4>
                     <h6>Price</h6>
@@ -52,7 +89,7 @@
             </div>
 
             <div class="figures-container">
-                <div class="image-container"><img src="images/figurine2.jpg" alt=""></div>
+                <img src="images/figurine2.jpg" alt="">
                 <div class="footer-figures-info">
                     <h4>Name</h4>
                     <h6>Price</h6>
@@ -60,7 +97,7 @@
             </div>
 
             <div class="figures-container">
-                <div class="image-container"><img src="images/figurine3.jpg" alt=""></div>
+                <img src="images/figurine3.jpg" alt="">
                 <div class="footer-figures-info">
                     <h4>Name</h4>
                     <h6>Price</h6>
@@ -68,7 +105,7 @@
             </div>
 
             <div class="figures-container">
-                <div class="image-container"><img src="images/figurine4.jpg" alt=""></div>
+                <img src="images/figurine4.jpg" alt="">
                 <div class="footer-figures-info">
                     <h4>Name</h4>
                     <h6>Price</h6>
@@ -76,7 +113,15 @@
             </div>
 
             <div class="figures-container">
-                <div class="image-container"><img src="images/figurine5.jpg" alt=""></div>
+                <img src="images/figurine5.jpg" alt="">
+                <div class="footer-figures-info">
+                    <h4>Name</h4>
+                    <h6>Price</h6>
+                </div>
+            </div>
+
+            <div class="figures-container">
+                <img src="images/figurine2.jpg" alt="">
                 <div class="footer-figures-info">
                     <h4>Name</h4>
                     <h6>Price</h6>
@@ -84,7 +129,9 @@
             </div>
         </div>
     </section>
+    <!-- END CATALOGUE FIGURES SECTION -->
 
+    <!-- FOOTER SECTION -->
     <footer>
         <div class="footer-container">
             <div class="first-row-info">
@@ -111,6 +158,7 @@
             </div>
         </div> 
     </footer>
+    <!-- END FOOTER SECTION -->
     
     <script src="src/main.js"></script>
 </body>
