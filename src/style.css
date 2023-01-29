@@ -103,8 +103,7 @@ header {
 .list-menu li a{
     text-decoration: none;
     color: var(--font-main-color);
-    font-size: 18px;
-    
+    font-size: 18px;  
 }
 
 .list-socials {
@@ -222,6 +221,7 @@ header {
 .checkout-btn {
     background-color: var(--bg-main-color);
     border: none;
+    cursor: pointer;
     color: var(--font-main-color);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -279,4 +279,76 @@ footer {
     padding: 3px 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media screen and (min-width: 768px){
+
+    .header-container #icon-cart {
+        font-size: 23px;
+        
+    }
+
+    .list-socials {
+        justify-content: center;
+    }
+
+    .list-socials li .bi {
+        font-size: 30px;   
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cart-container.active {
+        padding: 30px 50px;
+    }
+
+    .product-cross {
+        font-size: 23px;
+    }
+
+    .total-price-container h5 {
+        font-size: 23px;
+    }
+
+    .total-price {
+        font-size: 23px;
+    }
+
+    .checkout-btn {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: row;
+    }
+
+    .first-row-info {
+        font-size: 20px;
+    }
+
+    .second-row-info {
+        width: 30%;
+        flex-wrap: wrap;
+    }
+
+    
+}
+
+@media screen and (min-width: 1200px){
+
+    .header-container #icon-list {
+        font-size: 35px;
+    }
+    
+    .header-container #icon-cart {
+        font-size: 25px;
+    }
+
+    .list-menu li {
+        padding-top: 20px;
+    }
+
+    .list-menu li a{
+        font-size: var(--h4);
+    }
 }

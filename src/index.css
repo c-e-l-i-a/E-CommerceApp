@@ -59,6 +59,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 5px;
     padding: 3px;
     width: 100%;
 }
@@ -71,4 +72,47 @@
 .footer-figures-info h6 {
     color: var(--font-sub-color);
     letter-spacing: 1px;
+}
+
+/**
+* ! RESPONSIVE SECTION  
+*/
+
+@media screen and (min-width: 768px){
+    .grid-container {
+        grid-template-columns: repeat(3, 30%);
+        gap: 15px;
+    }
+
+    .filter-container button a {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    .grid-container {
+        grid-template-columns: repeat(4, 22%);
+        gap: 15px;
+    }
+
+    .footer-figures-info {
+        margin-top: 10px;
+    }
+
+    .footer-figures-info h5 {
+        font-size: var(--h5);
+    }
+
+    .footer-figures-info h6 {
+        font-size: var(--h6);
+    }
+}
+
+@media screen and (min-width: 1500px){
+
+    .filter-container {
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
 }
