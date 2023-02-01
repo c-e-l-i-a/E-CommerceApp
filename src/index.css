@@ -55,21 +55,30 @@
     overflow: hidden;
 }
 
-.footer-figures-info {
+
+.add-cart {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 5px;
-    padding: 3px;
     width: 100%;
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: #fff;
+    cursor: pointer;
 }
 
-.footer-figures-info h4 {
+.add-cart:hover {
+    background-color: #595959;
+}
+
+.add-cart h4 {
     padding-bottom: 3px;
     color: var(--bg-main-color);
 }
 
-.footer-figures-info h6 {
+.add-cart h5 {
     color: var(--font-sub-color);
     letter-spacing: 1px;
 }
