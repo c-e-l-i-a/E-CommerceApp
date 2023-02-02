@@ -1,52 +1,25 @@
+import {products} from './products.js'
+
 let addBtn = document.querySelectorAll('.add-cart')
 
-let products = [
-
-    {
-        name: 'Bakugo', 
-        tag: 'bakugo',
-        price: 45,
-        inCart: 0
-    },
-    {
-        name: 'Shoto', 
-        tag: 'shoto',
-        price: 55,
-        inCart: 0
-    },
-    {
-        name: 'Gojo', 
-        tag: 'gojo',
-        price: 40,
-        inCart: 0
-    },
-    {
-        name: 'Snake', 
-        tag: 'snake',
-        price: 60,
-        inCart: 0
-    },
-    {
-        name: 'Erza Scarlette', 
-        tag: 'erza',
-        price: 45,
-        inCart: 0
-    },
-    {
-        name: 'Natsu', 
-        tag: 'natsu',
-        price: 35,
-        inCart: 0
-    }
-]
-
+/* CLICK EVENT LISTENER */
 for(let i = 0; i < addBtn.length; i++) {
     addBtn[i].addEventListener('click', () => {
-        cartNumbers()
+        cartNumbers(products[i])
     })
 }
 
-function cartNumbers() {
+/* PRODUCTS NUMBER IN CART WHEN LOADING*/
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers')
+
+    if(productNumbers) {
+        document.querySelector('.cart-icon span').textContent = productNumbers
+    }
+}
+
+/* ADD PRODUCT IN LOCAL STORAGE AND CART*/
+function cartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers')
     productNumbers = parseInt(productNumbers)
 
@@ -55,6 +28,40 @@ function cartNumbers() {
         document.querySelector('.cart-icon span').textContent = productNumbers + 1
     } else {
         localStorage.setItem('cartNumbers', 1)
-        document.querySelector('.cart-icon span').textContent = 1
+        document.querySelector
+        
+        
+        ('.cart-icon span').textContent = 1
     }
+
+    setItems(product)
 }
+
+/* ADD ALL PRODUCTS AND NUMBERS */
+function setItems(product) {
+    console.log('my product is', product);
+
+    let cartItem =  localStorage.getItem('productsInCart')
+    cartItem = JSON.parse(cartItem)
+
+    if(cartItem != null) {
+
+        if(cartItem[product.tag] == undefined) {
+            cartItem = {
+                ...cartItem,
+                [product.tag]: product
+            }
+        }
+        cartItem[product.tag].inCart += 1 
+       
+    } else {
+        product.inCart = 1 
+        cartItem = {
+            [product.tag]: product
+        }
+    }
+
+    localStorage.setItem('productsInCart', JSON.stringify(cartItem))
+}
+
+onLoadCartNumbers()
