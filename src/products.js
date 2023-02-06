@@ -1,37 +1,37 @@
 export const products = [
     {
         name: 'Bakugo', 
-        tag: 'bakugo',
+        tag: 'figurine1.jpg',
         price: 45,
         inCart: 0
     },
     {
         name: 'Shoto', 
-        tag: 'shoto',
+        tag: 'figurine2.jpg',
         price: 55,
         inCart: 0
     },
     {
         name: 'Gojo', 
-        tag: 'gojo',
+        tag: 'figurine3.jpg',
         price: 40,
         inCart: 0
     },
     {
         name: 'Snake', 
-        tag: 'snake',
+        tag: 'figurine4.jpg',
         price: 60,
         inCart: 0
     },
     {
         name: 'Erza Scarlette', 
-        tag: 'erza',
+        tag: 'figurine5.jpg',
         price: 45,
         inCart: 0
     },
     {
         name: 'Natsu', 
-        tag: 'natsu',
+        tag: 'figurine1.jpg',
         price: 35,
         inCart: 0
     }

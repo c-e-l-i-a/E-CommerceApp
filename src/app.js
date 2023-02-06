@@ -3,6 +3,7 @@ import {products} from './products.js'
 let addBtn = document.querySelectorAll('.add-cart')
 let cartBtn = document.querySelector('.cart-icon')
 let menuBtn = document.getElementById('icon-list')
+let cartContainer = document.querySelector('.cart-container')
 
 
 /* SCROLL FUNCTIONS */
@@ -117,14 +118,41 @@ function totalProductsCost(productCost) {
     }
 
 }
-let cartContainer = document.querySelector('.cart-container')
+
 
 function cartDisplay() {
     let cartProduct = localStorage.getItem('productsInCart')
     cartProduct = JSON.parse(cartProduct)
+    let productsContainer = document.querySelector('.cart-products-container')
+    let cartCost = localStorage.getItem('totalCost')
+    let totalPriceContainer = document.querySelector('.total-price-container')
     
     if(cartProduct && cartContainer.classList.contains('active')) {
-        console.log('running');
+        productsContainer.innerHTML = ''
+        Object.values(cartProduct).map(item => {
+            productsContainer.innerHTML += `
+            <div class="cart-product">
+            <img src="../images/${item.tag}" alt="image product" style="height: 120px;">
+            <div class="product-info-container">
+                <div class="product-cross"><i class="bi bi-x"></i></div>
+                <div class="product-info">
+                <h4 class="product-title">${item.name}</h4>
+                <h5 class="price">${item.inCart * item.price} €</h5>
+                <div class="product-info-number">
+                    <i class="bi bi-dash"></i>
+                    <span class="quantity">${item.inCart}</span>
+                    <i class="bi bi-plus"></i>
+                </div>
+                </div>
+            </div>
+        </div>
+            `
+            totalPriceContainer.innerHTML = `
+            <h5>SUBTOTAL</h5>
+            <span class="total-price">${cartCost},00 €</span>
+            `
+
+        })
     } else {
         console.log('nop');
     }
