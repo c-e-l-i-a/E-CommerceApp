@@ -43,6 +43,7 @@ cartBtn.onclick = function() {
     }
 
     cartDisplay()
+    deleteProductsBtn()
 }
 
 /* CLICK EVENT LISTENER */
@@ -53,13 +54,14 @@ for(let i = 0; i < addBtn.length; i++) {
     })
 }
 
-/* PRODUCTS NUMBER IN CART WHEN LOADING*/
+/* PRODUCTS NUMBER IN CART DISPLAY WHEN LOADING*/
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers')
 
     if(productNumbers) {
         document.querySelector('.cart-icon span').textContent = productNumbers
     }
+    
 }
 
 /* ADD PRODUCT IN LOCAL STORAGE AND CART*/
@@ -77,6 +79,7 @@ function cartNumbers(product) {
         
         ('.cart-icon span').textContent = 1
     }
+
 
     setItems(product)
 }
@@ -105,6 +108,7 @@ function setItems(product) {
     }
 
     localStorage.setItem('productsInCart', JSON.stringify(cartItem))
+    deleteProductsBtn()
 }
 
 function totalProductsCost(productCost) {
@@ -120,6 +124,7 @@ function totalProductsCost(productCost) {
 }
 
 
+/* DISPLAY PRODUCTS IN CART */
 function cartDisplay() {
     let cartProduct = localStorage.getItem('productsInCart')
     cartProduct = JSON.parse(cartProduct)
@@ -127,21 +132,22 @@ function cartDisplay() {
     let cartCost = localStorage.getItem('totalCost')
     let totalPriceContainer = document.querySelector('.total-price-container')
     
+   
     if(cartProduct && cartContainer.classList.contains('active')) {
         productsContainer.innerHTML = ''
         Object.values(cartProduct).map(item => {
             productsContainer.innerHTML += `
             <div class="cart-product">
-            <img src="../images/${item.tag}" alt="image product" style="height: 120px;">
+            <img src="../images/${item.tag}.jpg" alt="image product" style="height: 120px;">
             <div class="product-info-container">
-                <div class="product-cross"><i class="bi bi-x"></i></div>
+                <div class="product-cross"><i class="bi bi-x" id=""></i></div>
                 <div class="product-info">
-                <h4 class="product-title">${item.name}</h4>
-                <h5 class="price">${item.inCart * item.price} €</h5>
+                <span class="product-title">${item.name}</span>
+                <div class="price">${item.inCart * item.price} €</div>
                 <div class="product-info-number">
-                    <i class="bi bi-dash"></i>
+                    <i class="bi bi-dash" id="bi-dash"></i>
                     <span class="quantity">${item.inCart}</span>
-                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-plus" id="bi-plus"></i>
                 </div>
                 </div>
             </div>
@@ -151,11 +157,41 @@ function cartDisplay() {
             <h5>SUBTOTAL</h5>
             <span class="total-price">${cartCost},00 €</span>
             `
-
+            deleteProductsBtn()
         })
-    } else {
-        console.log('nop');
     }
+
 }
+
+function deleteProductsBtn() {
+    let deleteProductsBtn = document.querySelectorAll('.bi-x')
+    let productName
+    let productNumbers = localStorage.getItem('cartNumbers')
+    let itemInCart = localStorage.getItem('productsInCart')
+    itemInCart = JSON.parse(itemInCart)
+    let totalCartCost = localStorage.getItem('totalCost')
+
+    for(let i=0; i < deleteProductsBtn.length; i++){
+        deleteProductsBtn[i].addEventListener('click', () => {
+            productName = deleteProductsBtn[i].parentElement.parentElement.firstElementChild.nextElementSibling.firstElementChild.textContent.toLowerCase()
+            //console.log(productName);
+            //console.log(itemInCart[productName].name + ' ' + itemInCart[productName].inCart);
+            
+            localStorage.setItem('cartNumbers', productNumbers - itemInCart[productName].inCart)
+
+            //TOTAL COST UPDATE
+            localStorage.setItem('totalCost', totalCartCost - (itemInCart[productName].price * itemInCart[productName].inCart))
+
+            //DELETE IN LOCAL STORAGE
+            delete itemInCart[productName]
+            localStorage.setItem('productsInCart', JSON.stringify(itemInCart))
+
+            cartDisplay()
+            onLoadCartNumbers()
+        })
+    }
+
+}
+
 
 onLoadCartNumbers()
