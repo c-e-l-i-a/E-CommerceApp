@@ -138,7 +138,14 @@ function cartDisplay() {
     let productsContainer = document.querySelector('.cart-products-container')
     let cartCost = localStorage.getItem('totalCost')
     let totalPriceContainer = document.querySelector('.total-price-container')
+    let checkoutBtn = document.querySelector('.checkout-btn')
     
+    if(cartProduct){
+        checkoutBtn.addEventListener('click', () => {
+            window.location.assign("../checkout.html");
+        })
+    }
+
     if(cartContainer.classList.contains('active')) {
 
         totalPriceContainer.innerHTML = `
@@ -146,8 +153,9 @@ function cartDisplay() {
             <span class="total-price">00,00 €</span>
             `
     }
-   
-    if(cartProduct && cartContainer.classList.contains('active')) {
+    
+   if(cartProduct && cartContainer.classList.contains('active')) {
+
         productsContainer.innerHTML = ''
         Object.values(cartProduct).map(item => {
             productsContainer.innerHTML += `
@@ -177,7 +185,7 @@ function cartDisplay() {
     } else {
         window.localStorage.clear()
     }
-    
+
     quantityChanges()
     deleteProductsBtn()
 
@@ -210,7 +218,6 @@ function deleteProductsBtn() {
             onLoadCartNumbers()
         })
     }
-
 }
 
 function quantityChanges() {

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/checkout.css">
+    <title>Figures Shop</title>
+</head>
+<body>
+    <header>
+        <h1>FIGURES</h1>
+    </header>
+
+    <main>
+        <div class="express-container">
+            <div class="express-title">Express checkout</div>
+            <div class="express-pay">
+                <button><i class="bi bi-paypal"></i></button>
+                <button><i class="bi bi-alipay"></i></button>
+                <button><i class="bi bi-currency-bitcoin"></i></button>
+            </div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+            <div class="contact-title">Contact informations</div>
+            <div class="form">
+                <input type="text" id="fname" name="firstname" placeholder="Full name">
+                <input type="text" id="email" name="email" placeholder="Email">
+                <input type="text" id="address" name="address" placeholder="Address">
+                <input type="text" name="postalCode" id="postalCode" placeholder="Postal code">
+                <input type="text" name="city" id="city" placeholder="City">
+                <input type="text" name="phone" id="phone" placeholder="Phone">
+            </div>
+            </div>
+
+            <div class="contact-payment">
+                <div class="contact-payment-title">Payment</div>
+                <div class="form-payment">
+                    <input type="text" name="cardname" id="cname" placeholder="Name on card" >
+                    <input type="text" name="cardnumber" id="cnumber" placeholder="1111-2222-3333-4444" >
+                    <input type="text" name="expmonth" id="expmonth" placeholder="Exp Month" >
+                    <input type="text" name="expyear" id="expyear" placeholder="Exp Year" >
+                    <input type="text" name="cvv" id="cvv" placeholder="CVV" >
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+:root {
+    --bg-main-color: #0D0D0D;
+    --font-main-color: #fff;
+    --font-secondary-color: #E59A01;
+    --font-sub-color: #595959;
+}
+
+header {
+    height: 100px;
+    background-color: var(--bg-main-color);
+    color: var(--font-main-color);
+    text-align: center;  
+}
+
+header h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
