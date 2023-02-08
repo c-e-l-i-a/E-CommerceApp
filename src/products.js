@@ -24,13 +24,13 @@ export const products = [
         inCart: 0
     },
     {
-        name: 'Erza Scarlette', 
+        name: 'Erza', 
         tag: 'erza',
         price: 45,
         inCart: 0
     },
     {
-        name: 'Natsu', 
+        name: 'Bakugo', 
         tag: 'bakugo',
         price: 35,
         inCart: 0
