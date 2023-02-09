@@ -17,7 +17,7 @@
         <div class="header-container">
             <i id="icon-list" class="bi bi-list"></i>
             <h1><a href="index.html">Figures</a></h1>
-            <div class="cart-icon"><i id="icon-cart" class="bi bi-cart-plus-fill"><a href="#"></a><span>0</span></i></div>
+            <div class="cart-icon"><a href="cart.html"><i id="icon-cart" class="bi bi-cart-plus-fill"><span>0</span></i></a></div>
         </div>       
     </header>
     <!-- END HEADER SECTION -->
@@ -39,33 +39,25 @@
     </nav>
     <!-- END NAV MENU -->
 
-    <!-- CART SECTION -->
-    <div class="cart-container">
-        <div class="cart-header-info">
-            <h3>Cart</h3>
-        </div>
-        <div class="cart-products-container">
-       
-        </div>
-
-        <div class="cart-footer-info">
-            <div class="total-price-container">
-        
-            </div>
-            <button class="checkout-btn">Check Out</button>
-        </div>
-    </div>
-    <!-- END CART SECTION-->
-
     <!-- CATALOGUE FIGURES SECTION -->
     <section class="catalogue-section">
         <div class="filter-container">
-           <button><a href="#">Filter By
-            <i class="bi bi-caret-down"></i></a>
-            </button>
+            <div class="select">
+                <span class="selected">All Figures</span>
+                <div class="arrow"></div>
+            </div>
+            <ul class="menu-filter">
+                <li class="active">All Figures</li>
+                <li>Naruto</li>
+                <li>Fairy Tail</li>
+                <li>Jujutsu Kaisen</li>
+                <li>FullMetal Alchemist</li>
+                <li>My hero academia</li>
+            </ul>
         </div>
+
         <div class="grid-container">
-            <div class="figures-container">
+            <div class="figures-container" data-filter="my hero academia">
                 <img src="images/bakugo.jpg" alt="">  
                 <button class="add-cart">
                     <h4>Add to Cart - Bakugo (MHA)</h4>
@@ -73,7 +65,7 @@
                 </button>   
             </div>
 
-            <div class="figures-container">
+            <div class="figures-container" data-filter="my hero academia">
                 <img src="images/shoto.jpg" alt="">
                 <button class="add-cart">
                         <h4>Name</h4>
@@ -81,7 +73,7 @@
                 </button>       
             </div>
 
-            <div class="figures-container">
+            <div class="figures-container" data-filter="jujutsu kaisen">
                 <img src="images/gojo.jpg" alt="">
                 <button class="add-cart">
                     <h4>Name</h4>
@@ -89,7 +81,7 @@
                 </button>
             </div>
 
-            <div class="figures-container">
+            <div class="figures-container" data-filter="naruto">
                 <img src="images/snake.jpg" alt="">
                 <button class="add-cart">
                     <h4>Name</h4>
@@ -97,7 +89,7 @@
                 </button>
             </div>
 
-            <div class="figures-container">
+            <div class="figures-container" data-filter="fairy tail">
                 <img src="images/erza.jpg" alt="">
                 <button class="add-cart">
                     <h4>Name</h4>
@@ -105,7 +97,7 @@
                 </button>
             </div>
 
-            <div class="figures-container">
+            <div class="figures-container" data-filter="my hero academia">
                 <img src="images/bakugo.jpg" alt="">
                 <button class="add-cart">
                     <h4>Name</h4>
@@ -146,5 +138,6 @@
     <!-- END FOOTER SECTION -->
 
     <script type="module" src="src/app.js"></script>
+    <script src="src/filter.js"></script>
 </body>
 </html>

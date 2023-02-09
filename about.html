@@ -17,7 +17,7 @@
         <div class="header-container">
             <i id="icon-list" class="bi bi-list"></i>
             <h1><a href="index.html">Figures</a></h1>
-            <i id="icon-cart" class="bi bi-cart-plus-fill"><a href="#"></a></i>
+            <div class="cart-icon"><a href="cart.html"><i id="icon-cart" class="bi bi-cart-plus-fill"><span>0</span></i></a></div>
         </div>       
     </header>
     <!-- END HEADER SECTION -->
@@ -38,39 +38,6 @@
         </div>
     </nav>
     <!-- END NAV MENU -->
-
-    <!-- CART SECTION -->
-    <div class="cart-container">
-        <div class="cart-header-info">
-            <h3>Cart</h3>
-        </div>
-        <div class="cart-products-container">
-        <div class="cart-product">
-            <img src="images/figurine4.jpg" alt="image product" style="height: 120px;">
-            <div class="product-info-container">
-                <div class="product-cross"><i class="bi bi-x"></i></div>
-                <div class="product-info">
-                <h4>Name</h4>
-                <h5>Price</h5>
-                <div class="product-info-number">
-                    <i class="bi bi-dash"></i>
-                    <span class="quantity">0</span>
-                    <i class="bi bi-plus"></i>
-                </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="cart-footer-info">
-            <div class="total-price-container">
-            <h5>SUBTOTAL</h5>
-            <span class="total-price">00,00 €</span>
-            </div>
-            <button class="checkout-btn">Check Out</button>
-        </div>
-    </div>
-    <!-- END CART SECTION-->
 
     <!-- ABOUT SECTION-->
     <div class="about-container">
@@ -126,7 +93,7 @@
     </footer>
     <!-- END FOOTER SECTION -->
     
-    <script src="src/app.js"></script>
+    <script type="module" src="src/app.js"></script>
     
 </body>
 </html>

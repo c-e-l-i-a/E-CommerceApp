@@ -1,0 +1,132 @@
+:root {
+    --bg-main-color: #0D0D0D;
+    --font-main-color: #fff;
+    --font-secondary-color: #e5b401;
+    --font-sub-color: #e3dcdc;
+
+    --h1: 40px;
+    --h2: 32px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 16px;
+}
+
+.cart-container {
+    background-color: var(--font-main-color);
+    height: 90vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+    overflow: hidden;
+    padding: 20px 20px;
+}
+
+.cart-header-info {
+    width: 100%;
+    opacity: 1;
+}
+
+.cart-header-info h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cart-products-container {
+    min-height: 70vh;
+    opacity: 1;
+    overflow-y: scroll;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-product {
+    display: flex;
+    justify-content: flex-start;
+    max-height: 120px;
+    margin-top: 10px;
+}
+
+.product-info-container {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.product-cross {
+    text-align: end;
+    height: 20%;
+}
+
+.product-info {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info-number span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.product-info-number .bi {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.product-cross .bi {
+    cursor: pointer;
+}
+
+.cart-footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+}
+
+
+.total-price-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price-container h5 {
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    background-color: var(--bg-main-color);
+    border: none;
+    cursor: pointer;
+    color: var(--font-main-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+@media screen and (min-width: 1200px){
+
+    .cart-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .cart-header-info h3 {
+        font-size: var(--h3);
+    }
+
+    .checkout-btn {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+
+    .product-cross .bi {
+        font-size: 25px;
+    }
+}
