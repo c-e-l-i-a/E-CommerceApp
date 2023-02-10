@@ -100,6 +100,7 @@
 
 .checkout-btn {
     background-color: var(--bg-main-color);
+    margin-bottom: 50px;
     border: none;
     cursor: pointer;
     color: var(--font-main-color);
@@ -110,7 +111,11 @@
 }
 
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 768px){
+
+    .cart-products-container {
+        min-height: 60vh;
+    }
 
     .cart-container {
         width: 80%;

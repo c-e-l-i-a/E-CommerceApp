@@ -224,7 +224,7 @@ function deleteProductsBtn() {
 
     for(let i=0; i < deleteProductsBtn.length; i++){
         deleteProductsBtn[i].addEventListener('click', () => {
-            productName = deleteProductsBtn[i].parentElement.parentElement.firstElementChild.nextElementSibling.firstElementChild.textContent.toLowerCase()
+            productName = deleteProductsBtn[i].parentElement.parentElement.firstElementChild.nextElementSibling.firstElementChild.textContent.toLowerCase().replace(/ /g, '').trim()
             //console.log(productName);
             //console.log(itemInCart[productName].name + ' ' + itemInCart[productName].inCart);
             

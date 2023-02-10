@@ -1,7 +1,7 @@
 :root {
     --bg-main-color: #0D0D0D;
     --font-main-color: #fff;
-    --font-secondary-color: #E59A01;
+    --font-secondary-color: #e5b401;
     --font-sub-color: #595959;
 }
 
@@ -86,22 +86,24 @@
 
 .grid-container {
     margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 48%);
-    justify-content: center;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 10px;
 }
 
 .figures-container {
+    height: auto;
+    width: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
 .figures-container img{
-    max-height: 100%;
-    width: auto;
-    overflow: hidden;
+    height: 266px;
+    width: 178px;
 }
 
 
@@ -119,7 +121,7 @@
 }
 
 .add-cart:hover {
-    background-color: #595959;
+    background-color: #c4c4c4;
 }
 
 .add-cart h4 {
@@ -137,10 +139,13 @@
 */
 
 @media screen and (min-width: 768px){
-    .grid-container {
-        grid-template-columns: repeat(3, 30%);
-        gap: 15px;
+    .grid-container {    
         margin-bottom: 30px;
+    }
+
+    .figures-container img{
+        height: 400px;
+        width: 267px;
     }
 
     .filter-container button a {
@@ -151,7 +156,6 @@
 
 @media screen and (min-width: 1200px){
     .grid-container {
-        grid-template-columns: repeat(4, 22%);
         gap: 15px;
     }
 
@@ -169,6 +173,8 @@
 }
 
 @media screen and (min-width: 1500px){
+
+
 
     .filter-container {
         width: 11em;
